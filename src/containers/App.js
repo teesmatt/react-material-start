@@ -8,43 +8,19 @@ import { CssBaseline } from "@material-ui/core";
 import theme from "../style/theme";
 
 const styles = {
-  paper: {
-    width: 200,
-    height: 120
+  root: {
+    height: '100%'
   },
-  homeTitle: {
-    marginTop: 20
-  },
-  scrollFix: {
-    padding: 20
-  }
 };
 class App extends Component {
   render() {
     const classes = this.props.classes;
     return (
-      <div>
-        <CssBaseline />
+      <div className={classes.root}>
         <MuiThemeProvider theme={theme}>
-          <NavBar />
-          <div className={classes.scrollFix}>
-            <Grid
-              container
-              justify="center"
-              alignItems="center"
-              className={classes.root}
-              spacing={16}
-            >
-              <Grid item xs={3}>
-                <Typography
-                  className={classes.homeTitle}
-                  align="center"
-                  variant="h3"
-                >
-                  Title
-                </Typography>
-              </Grid>
-            </Grid>
+          <NavBar /> 
+          <div>
+            Content
           </div>
         </MuiThemeProvider>
       </div>
